@@ -136,9 +136,9 @@ export function EnhancedCarousel() {
         ref={scrollContainerRef}
         className={`overflow-x-auto scrollbar-hide ${isScrolling ? "cursor-wait" : "cursor-grab active:cursor-grabbing"}`}
         style={{
-          mask: "linear-gradient(to right, #FFECE1 0%, rgba(255, 236, 225, 0.8) 5%, transparent 10%, transparent 90%, rgba(255, 236, 225, 0.8) 95%, #FFECE1 100%)",
+          mask: "linear-gradient(to right, transparent 0%, transparent 10%, black 20%, black 80%, transparent 90%, transparent 100%)",
           WebkitMask:
-            "linear-gradient(to right, #FFECE1 0%, rgba(255, 236, 225, 0.8) 5%, transparent 10%, transparent 90%, rgba(255, 236, 225, 0.8) 95%, #FFECE1 100%)",
+            "linear-gradient(to right, transparent 0%, transparent 10%, black 20%, black 80%, transparent 90%, transparent 100%)",
         }}
       >
         <div className="flex gap-6 pb-4 px-12" style={{ width: "max-content" }}>

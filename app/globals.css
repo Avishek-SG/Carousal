@@ -31,25 +31,25 @@ body {
   cursor: grabbing;
 }
 
-/* Enhanced fade mask for better browser support */
+/* Enhanced fade mask for better browser support - corrected version */
 .fade-mask-warm {
   mask: linear-gradient(
     to right,
-    #ffece1 0%,
-    rgba(255, 236, 225, 0.8) 5%,
+    transparent 0%,
     transparent 10%,
+    black 20%,
+    black 80%,
     transparent 90%,
-    rgba(255, 236, 225, 0.8) 95%,
-    #ffece1 100%
+    transparent 100%
   );
   -webkit-mask: linear-gradient(
     to right,
-    #ffece1 0%,
-    rgba(255, 236, 225, 0.8) 5%,
+    transparent 0%,
     transparent 10%,
+    black 20%,
+    black 80%,
     transparent 90%,
-    rgba(255, 236, 225, 0.8) 95%,
-    #ffece1 100%
+    transparent 100%
   );
 }
 
