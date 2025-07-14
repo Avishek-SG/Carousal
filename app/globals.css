@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom background color */
+body {
+  background-color: #ffece1;
+}
+
+/* Hide scrollbar for webkit browsers */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth scroll behavior */
+.scrollbar-hide {
+  scroll-behavior: smooth;
+}
+
+/* Custom cursor states */
+.cursor-grab {
+  cursor: grab;
+}
+
+.cursor-grab:active {
+  cursor: grabbing;
+}
+
+/* Enhanced fade mask for better browser support */
+.fade-mask-warm {
+  mask: linear-gradient(
+    to right,
+    #ffece1 0%,
+    rgba(255, 236, 225, 0.8) 5%,
+    transparent 10%,
+    transparent 90%,
+    rgba(255, 236, 225, 0.8) 95%,
+    #ffece1 100%
+  );
+  -webkit-mask: linear-gradient(
+    to right,
+    #ffece1 0%,
+    rgba(255, 236, 225, 0.8) 5%,
+    transparent 10%,
+    transparent 90%,
+    rgba(255, 236, 225, 0.8) 95%,
+    #ffece1 100%
+  );
+}
+
+/* Alternative approach using box-shadow inset with warm background */
+.fade-shadow-warm {
+  position: relative;
+}
+
+.fade-shadow-warm::before,
+.fade-shadow-warm::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.fade-shadow-warm::before {
+  left: 0;
+  background: linear-gradient(to right, #ffece1, transparent);
+}
+
+.fade-shadow-warm::after {
+  right: 0;
+  background: linear-gradient(to left, #ffece1, transparent);
+}
+
+@media (max-width: 640px) {
+  .fade-shadow-warm::before,
+  .fade-shadow-warm::after {
+    width: 30px;
+  }
+}
+
+/* Enhanced animations */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 1.5s ease-out infinite;
+}
